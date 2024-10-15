@@ -2,7 +2,6 @@
 #include <zephyr/irq.h>
 #include <zephyr/arch/arm/cortex_m/nvic.h>
 
-void
 
 typedef uint32_t IRQn_Type;
 
