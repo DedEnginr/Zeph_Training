@@ -1,0 +1,53 @@
+#include <armv6-m.dtsi>
+
+/ {
+	
+	cpus {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			
+			cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-m0+";
+			reg = <0>;
+			};
+	};
+	sram0: memory@20000000 {
+		compatible = "mmio-sram";
+		reg = <0x20000000 (64*1024)>;
+	};
+
+	flash0: serial-flash@0 {
+		compatible = "serial-flash";
+		reg = <0x00000000 (10*1024)>;
+	};
+
+	sysclk: system-clock {
+		compatible = "fixed-clock";
+		clock-frequency = <48000000>;
+		#clock-cells = <0>;
+	};
+	
+	
+	soc {
+        compatible = "custom,my_soc";
+        #address-cells = <1>;
+        #size-cells = <1>;
+        
+        interrupt-controller@e000e100 {
+            compatible = "arm,v6m-nvic";
+            reg = <0xe000e100 0x100>;
+            interrupt-controller;
+            #interrupt-cells = <2>;
+            arm,num-irq-priority-bits = <3>;
+        };
+        
+        uart0: uart@40034000 {
+			compatible = "custom,my_board_2-uart";
+			reg = <0x40034000 0x400>;
+			clock-frequency = <48000000>;
+			status = "disabled";
+		};
+	};
+};
+

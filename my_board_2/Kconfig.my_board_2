@@ -1,0 +1,11 @@
+#
+# Copyright 2022 Huawei France Technologies SASU
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config BOARD_MY_BOARD_2
+	select SOC_MY_SOC
+	
+
+
+

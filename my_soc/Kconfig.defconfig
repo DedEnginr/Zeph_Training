@@ -1,0 +1,13 @@
+
+
+if SOC_MY_SOC
+
+config NUM_IRQS
+	default 178
+	
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+	default 48000000
+
+endif #MY_SOC
+
+

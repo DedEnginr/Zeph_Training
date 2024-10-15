@@ -1,0 +1,11 @@
+identifier: my_board_2
+name: new try
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - cross-compile
+ram: 8192
+vendor: custom
+
+

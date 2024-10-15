@@ -1,0 +1,8 @@
+
+config SOC_MY_SOC
+		bool
+		
+config SOC
+	default "my_soc" if SOC_MY_SOC
+	
+

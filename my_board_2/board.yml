@@ -1,0 +1,9 @@
+board:
+  name: my_board_2
+  vendor: custom
+  socs:
+  - name: my_soc
+  
+  
+  
+  

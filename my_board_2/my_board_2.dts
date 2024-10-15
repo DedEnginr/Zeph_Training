@@ -1,0 +1,26 @@
+/dts-v1/;
+
+#include <custom/my_soc.dtsi>
+
+/ {
+	model = "my new board 2";
+	compatible = "custom,my_board_2";
+	
+	chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,shell-uart = &uart0;
+	};
+};
+
+
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+};
+
+
+
+
+
+
