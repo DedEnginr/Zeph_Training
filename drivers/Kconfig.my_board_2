@@ -1,0 +1,9 @@
+
+config UART_MY_BOARD_2
+	bool "CC32XX UART driver"
+	default y
+	depends on DT_HAS_CUSTOM_MY_BOARD_2_UART_ENABLED
+	select SERIAL_HAS_DRIVER
+	select SERIAL_SUPPORT_INTERRUPT
+	help
+	  This option enables the uart

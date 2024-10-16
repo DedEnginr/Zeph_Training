@@ -1,0 +1,21 @@
+description: my custom board 2
+
+compatible: "custom,my_board_2-uart"
+
+include: [uart-controller.yaml, base.yaml]
+
+properties:
+  reg:
+    required: true
+    
+  interrupt:
+  	required: true
+    
+    
+    
+    
+    
+    
+    
+    
+    
