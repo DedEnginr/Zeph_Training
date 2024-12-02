@@ -1,0 +1,14 @@
+common:
+  tags: ztest
+  harness: console
+  build_only: true
+  harness_config:
+    type: ztest
+tests:
+  mytest.add:
+    platform_allow:
+      - native_posix
+      - native_sim
+      - qemu_x86
+    integration_platforms:
+      - native_sim
